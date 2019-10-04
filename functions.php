@@ -65,8 +65,9 @@ add_action( 'widgets_init', 'DM\Theme\widgets_init' );
  * Enqueue CSS.
  */
 function enqueue_css() {
-	wp_enqueue_style( 'bulma', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css' );
-	wp_enqueue_style( 'david-matthew-ie-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bulma', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css', array(), '0.7.5' );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,900&display=swap', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'david-matthew-ie-style', get_stylesheet_uri(), array( 'bulma' ), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'wp_enqueue_scripts', 'DM\Theme\enqueue_css' );
 
@@ -74,7 +75,7 @@ add_action( 'wp_enqueue_scripts', 'DM\Theme\enqueue_css' );
  * Enqueue scripts.
  */
 function enqueue_js() {
-	wp_enqueue_script( 'fontawesome-5', 'https://kit.fontawesome.com/531e72de22.js' );
+	wp_enqueue_script( 'fontawesome-5', 'https://kit.fontawesome.com/531e72de22.js', array(), '5.11.2', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
