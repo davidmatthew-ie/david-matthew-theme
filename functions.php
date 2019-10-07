@@ -76,6 +76,7 @@ add_action( 'wp_enqueue_scripts', 'DM\Theme\enqueue_css' );
  */
 function enqueue_js() {
 	wp_enqueue_script( 'fontawesome-5', 'https://kit.fontawesome.com/531e72de22.js', array(), '5.11.2', false );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
