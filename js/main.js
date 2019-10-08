@@ -1,19 +1,14 @@
 /**
  * General js/jQuery functionality for the theme.
- *
- * @package David_Matthew_IE
  */
 
 jQuery(document).ready(function($){
 
-    // Check for click events on the navbar burger icon
+    // Mobile menu toggle functionality
     $(".navbar-burger").click(function() {
 
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        $(".navbar-burger").toggleClass("is-active");
+		$(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
 
     });
-    
-    
 });

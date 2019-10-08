@@ -9,42 +9,39 @@
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
 
-    <div class="container">
+	<div class="container">
 
-        <div class="navbar-brand">
+		<div class="navbar-brand">
 
-            <a class="navbar-item" href=""><img src="#">Logo</a>
+			<a class="navbar-item" href=""><img src="#" alt="Logo"></a>
 
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-target">
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-target">
 
-                <span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
 
-                <span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
 
-                <span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
 
-            </a>
+			</a>
 
-        </div>
+		</div>
 
-        <div id="navbar-target" class="navbar-menu">
+			<?php
 
-            <div class="navbar-end">
+			$menu_args = array(
+				'theme_location' => 'primary',
+				'depth'          => 2,
+				'container'      => false,
+				'menu_class'     => 'navbar-menu navbar-end',
+				'menu_id'        => 'navbar-target',
+				'walker'         => new \DM\Theme\Walker(),
+			);
 
-                <a class="navbar-item">About</a>
+			wp_nav_menu( $menu_args );
 
-                <a class="navbar-item">Repos</a>
+			?>
 
-                <a class="navbar-item">Creative Work</a>
-
-                <a class="navbar-item">Blog</a>
-
-                <a class="navbar-item">Contact</a>
-
-            </div>
-
-        </div>
-
-    </div>
+	</div>
 
 </nav>
