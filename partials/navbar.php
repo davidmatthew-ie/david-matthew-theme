@@ -27,20 +27,24 @@
 
 		</div>
 
+		<div id="navbar-target" class="navbar-menu">
+
 			<?php
 
 			$menu_args = array(
 				'theme_location' => 'primary',
 				'depth'          => 2,
 				'container'      => false,
-				'menu_class'     => 'navbar-menu navbar-end',
-				'menu_id'        => 'navbar-target',
+				'items_wrap'     => '<div id="%1$s" class="%2$s">%3$s</div>',
+				'menu_class'     => 'navbar-end',
 				'walker'         => new \DM\Theme\Walker(),
 			);
 
 			wp_nav_menu( $menu_args );
 
 			?>
+
+		</div>
 
 	</div>
 
