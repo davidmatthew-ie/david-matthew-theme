@@ -23,38 +23,24 @@ class Walker extends \Walker_Nav_Menu {
 	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 
-		$title     = $item->title;
-		$permalink = $item->url;
-		$classes   = implode( ' ', $item->classes );
+		$classes = implode( ' ', $item->classes );
 
 		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
-			$output .= '<div class="navbar-item has-dropdown is-hoverable">';
+			$output .= '<li class="navbar-item has-dropdown is-hoverable ' . $classes . '">';
 
-			$output .= '<a class="navbar-link">' . $title . '</a>';
+			$output .= '<a class="navbar-link" href="' . $item->url . '">' . $item->title . '</a>';
 
-			$output .= '<div class="navbar-dropdown">';
-
-		} elseif ( in_array( 'divider', $item->classes, true ) ) {
-
-			$output .= '<hr class="navbar-divider">';
+			$output .= '<ul class="navbar-dropdown">';
 
 		} else {
 
-			$output .= '<a class="navbar-item ' . $classes . '" ';
+			$output .= '<li class="navbar-item ' . $classes . '">';
 
-			if ( $permalink && '#' !== $permalink ) {
+			$output .= '<a href="' . $item->url . '">' . $item->title . '</a></li>';
 
-				$output .= 'href="' . $permalink . '"';
-
-			} else {
-
-				$output .= '';
-
-			}
-
-			$output .= '>' . $title . '</a>';
 		}
+
 	}
 
 	/**
@@ -70,34 +56,9 @@ class Walker extends \Walker_Nav_Menu {
 
 		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
-			$output .= '</div></div>';
-
-		} else {
-
-			return;
+			$output .= '</li></ul>';
 
 		}
-	}
-
-	/**
-	 * Starts the list before the elements are added.
-	 *
-	 * @param string   $output Used to append additional content (passed by reference).
-	 * @param int      $depth Depth of menu item. Used for padding.
-	 * @param stdClass $args An object of wp_nav_menu() arguments.
-	 */
-	public function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$output .= '<div class="navbar-end">';
-	}
-
-	/**
-	 * Ends the element output, if needed.
-	 *
-	 * @param string   $output Used to append additional content (passed by reference).
-	 * @param int      $depth Depth of menu item. Used for padding.
-	 * @param stdClass $args An object of wp_nav_menu() arguments.
-	 */
-	public function end_lvl( &$output, $depth = 0, $args = array() ) {
-		$output .= '</div>';
+		
 	}
 }

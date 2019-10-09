@@ -35,7 +35,6 @@
 				'theme_location' => 'primary',
 				'depth'          => 2,
 				'container'      => false,
-				'items_wrap'     => '<div id="%1$s" class="%2$s">%3$s</div>',
 				'menu_class'     => 'navbar-end',
 				'walker'         => new \DM\Theme\Walker(),
 			);
