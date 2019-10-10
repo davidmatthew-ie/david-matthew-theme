@@ -59,6 +59,6 @@ class Walker extends \Walker_Nav_Menu {
 			$output .= '</li></ul>';
 
 		}
-		
+
 	}
 }

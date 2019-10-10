@@ -11,23 +11,17 @@
 
 	<div class="container">
 
-		<div class="navbar-brand">
+		<div class="navbar-logo">
 
-			<a class="navbar-item" href=""><img src="#" alt="Logo"></a>
-
-			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-target">
-
-				<span aria-hidden="true"></span>
-
-				<span aria-hidden="true"></span>
-
-				<span aria-hidden="true"></span>
-
-			</a>
+			<a href=""><img src="#" alt="Logo"></a>
 
 		</div>
 
-		<div id="navbar-target" class="navbar-menu">
+		<div class="navbar-btn">
+
+		</div>
+
+		<div id="navbar-target">
 
 			<?php
 
@@ -35,8 +29,7 @@
 				'theme_location' => 'primary',
 				'depth'          => 2,
 				'container'      => false,
-				'menu_class'     => 'navbar-end',
-				'walker'         => new \DM\Theme\Walker(),
+				// 'walker'       => new \DM\Theme\Walker(),
 			);
 
 			wp_nav_menu( $menu_args );
