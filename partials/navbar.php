@@ -11,17 +11,17 @@
 
 	<div class="container">
 
-		<div class="navbar-logo">
+		<div class="logo">
 
-			<a href=""><img src="#" alt="Logo"></a>
-
-		</div>
-
-		<div class="navbar-btn">
+			<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri() . '/img/dm-logo-2019.svg'; ?>" alt="Logo"></a>
 
 		</div>
 
-		<div id="navbar-target">
+		<div class="navbar-toggle">
+
+		</div>
+
+		<div id="desktop-menu">
 
 			<?php
 
@@ -36,6 +36,12 @@
 			wp_nav_menu( $menu_args );
 
 			?>
+
+		</div>
+
+		<div id="mobile-menu">
+
+			<?php wp_nav_menu( $menu_args ); ?>
 
 		</div>
 

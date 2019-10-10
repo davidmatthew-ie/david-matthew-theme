@@ -1,11 +1,12 @@
 
 .navbar {
-    .navbar-item {
-        a {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 100%;
+    .logo {
+        img {
+            width: 50px;
         }
+    }
+
+    #desktop-menu {
+        display: none;
     }
 }
