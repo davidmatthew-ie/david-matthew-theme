@@ -29,7 +29,8 @@
 				'theme_location' => 'primary',
 				'depth'          => 2,
 				'container'      => false,
-				// 'walker'       => new \DM\Theme\Walker(),
+				'items_wrap'     => '<div id="%1$s" class="%2$s">%3$s</div>',
+				'walker'         => new \DM\Theme\Walker(),
 			);
 
 			wp_nav_menu( $menu_args );

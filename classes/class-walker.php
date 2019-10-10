@@ -25,21 +25,25 @@ class Walker extends \Walker_Nav_Menu {
 
 		$classes = implode( ' ', $item->classes );
 
-		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
+		$output .= '<a href="' . $item->url . '">';
+		$output .= '<span class="' . $classes . '"></span>';
+		$output .= '<span class="navbar-title">' . $item->title . '</span></a>';
 
-			$output .= '<li class="navbar-item has-dropdown is-hoverable ' . $classes . '">';
+		// if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
-			$output .= '<a class="navbar-link" href="' . $item->url . '">' . $item->title . '</a>';
+		// 	$output .= '<li class="navbar-item has-dropdown is-hoverable ' . $classes . '">';
 
-			$output .= '<ul class="navbar-dropdown">';
+		// 	$output .= '<a class="navbar-link" href="' . $item->url . '">' . $item->title . '</a>';
 
-		} else {
+		// 	$output .= '<ul class="navbar-dropdown">';
 
-			$output .= '<li class="navbar-item ' . $classes . '">';
+		// } else {
 
-			$output .= '<a href="' . $item->url . '">' . $item->title . '</a></li>';
+		// 	$output .= '<li class="navbar-item ' . $classes . '">';
 
-		}
+		// 	$output .= '<a href="' . $item->url . '">' . $item->title . '</a></li>';
+
+		// }
 
 	}
 
