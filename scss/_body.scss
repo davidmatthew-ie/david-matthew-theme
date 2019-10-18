@@ -1,7 +1,19 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 10px;
+    margin: 0;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }

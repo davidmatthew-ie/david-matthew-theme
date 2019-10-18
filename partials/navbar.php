@@ -5,45 +5,44 @@
  * @package David_Matthew_IE
  */
 
+$menu_args = array(
+	'theme_location' => 'primary',
+	'depth'          => 2,
+	'container'      => false,
+	'walker'         => new \DM\Theme\Walker(),
+);
+
 ?>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav role="navigation" aria-label="main navigation">
 
-	<div class="container">
+	<div class="navbar container">
 
-		<div class="logo">
+		<a class="logo" href="<?php echo get_home_url(); ?>">
 
-			<a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri() . '/img/dm-logo-2019.svg'; ?>" alt="Logo"></a>
+			<img src="<?php echo get_template_directory_uri() . '/img/dm-logo-2019.svg'; ?>" alt="Logo">
 
-		</div>
+		</a>
 
-		<div class="navbar-toggle">
+		<div id="navbar-toggle">
 
-		</div>
-
-		<div id="desktop-menu">
-
-			<?php
-
-			$menu_args = array(
-				'theme_location' => 'primary',
-				'depth'          => 2,
-				'container'      => false,
-				'items_wrap'     => '<div id="%1$s" class="%2$s">%3$s</div>',
-				'walker'         => new \DM\Theme\Walker(),
-			);
-
-			wp_nav_menu( $menu_args );
-
-			?>
+			<div></div>
+			<div></div>
+			<div></div>
 
 		</div>
 
-		<div id="mobile-menu">
+		<div id="menu-desktop">
 
 			<?php wp_nav_menu( $menu_args ); ?>
 
 		</div>
+
+	</div>
+
+	<div id="menu-mobile">
+
+		<?php wp_nav_menu( $menu_args ); ?>
 
 	</div>
 
