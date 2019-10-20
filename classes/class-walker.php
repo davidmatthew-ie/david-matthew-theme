@@ -26,9 +26,10 @@ class Walker extends \Walker_Nav_Menu {
 		$classes = implode( ' ', $item->classes );
 
 		if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
-			$output .= '<li><a href="' . $item->url . '">';
+			$output .= '<li class="has-sub-menu"><a href="' . $item->url . '">';
 			$output .= '<span class="' . $classes . '"></span>';
-			$output .= '<span class="navbar-title">' . $item->title . '</span></a>';
+			$output .= '<span class="navbar-title">' . $item->title . '</span>';
+			$output .= '<i class="fas fa-angle-down"></i></a>';
 
 		} else {
 			$output .= '<li><a href="' . $item->url . '">';

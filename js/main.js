@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     /**
-     * The below code looks after the navbar toggling animations.
+     * Functionality for the navbar-toggle animations.
      */
     let navToggle = document.getElementById('navbar-toggle');
     let menuIsHidden = true;
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Initialize these values differently, depending on whether the menu is visible or off-screen.
         if (menuIsHidden) {
-            menuLeftPos = '14px';
+            menuLeftPos = '10%';
             navRotation = '360deg';
             bar1TransY = '15px';
             bar1Rotation = '-45deg';
@@ -47,4 +47,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set the menu display boolean to its opposite.
         menuIsHidden = !menuIsHidden; 
     });
+
+
+    /**
+     * Functionality for toggling submenu items.
+     */
+    let submenus = document.querySelectorAll('.has-sub-menu');
+    for (let i = 0; i < submenus.length; i++) {
+        submenus[i].addEventListener('click', function() {
+            submenus[i].classList.toggle('show');
+        });
+    }
+    
 });

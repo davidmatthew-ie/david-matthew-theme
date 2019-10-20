@@ -21,15 +21,20 @@ nav {
 
     ul {
         list-style-type: none;
-        
-        a {
-            text-decoration: none;
-            color: #666;
+
+        .fas, .far, .fab {
+            min-width: 1.8em;
+        }
+    
+        .fa-angle-down {
+            min-width: unset;
+            margin-left: 0.5em;
         }
     }
 
-    .fas, .far, .fab {
-        min-width: 1.8em;
+    a {
+        text-decoration: none;
+        color: #666;
     }
 
     .navbar-title {
@@ -55,7 +60,6 @@ nav {
         div:nth-child(2) {
             width: 80%;
         }
-
     }
 
     #menu-desktop {
@@ -66,14 +70,15 @@ nav {
         position: fixed;
         top: 71px;
         left: 100%;
-        width: 100%;
+        width: 90%;
         height: 100%;
+        padding: 20px 0 0 15px;
         border-left: 1px solid #ddd;
         background-color: #fff;
 
         .menu {
-            margin-top: 2em;
-            padding-inline-start: 25px;
+            padding-inline-start: 0;
+            margin-block-start: 0;
 
             li {
                 padding: 10px;
@@ -92,11 +97,28 @@ nav {
         }
 
         .sub-menu {
-            margin-top: 1em;
+            visibility: hidden;
+            height: 0;
+            opacity: 0;
+            margin-top: 0;
+            padding-inline-start: 0.5em;
 
             li {
                 padding: 5px;
             }
+
+            a {
+                font-size: 1.2em;
+            }
+        }
+
+        .has-sub-menu.show {
+            .sub-menu {
+                visibility: visible;
+                height: 100%;
+                opacity: 1;
+                margin-top: 0.5em;
+            }  
         }
     }
 }

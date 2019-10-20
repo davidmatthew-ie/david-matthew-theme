@@ -18,9 +18,9 @@ $menu_args = array(
 
 	<div class="navbar container">
 
-		<a class="logo" href="<?php echo get_home_url(); ?>">
+		<a class="logo" href="<?php echo esc_url( home_url() ); ?>">
 
-			<img src="<?php echo get_template_directory_uri() . '/img/dm-logo-2019.svg'; ?>" alt="Logo">
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/img/dm-logo-2019.svg' ); ?>" alt="Logo">
 
 		</a>
 
@@ -43,6 +43,20 @@ $menu_args = array(
 	<div id="menu-mobile">
 
 		<?php wp_nav_menu( $menu_args ); ?>
+
+		<div class="social-icons">
+
+			<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+			<a href="#"><i class="fas fa-code"></i></a>
+
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+			<a href="#"><i class="fab fa-instagram"></i></a>
+
+			<a href="#"><i class="fab fa-twitter"></i></a>
+
+		</div>
 
 	</div>
 

@@ -38,12 +38,16 @@ nav .logo img {
 nav ul {
   list-style-type: none;
 }
-nav ul a {
+nav ul .fas, nav ul .far, nav ul .fab {
+  min-width: 1.8em;
+}
+nav ul .fa-angle-down {
+  min-width: unset;
+  margin-left: 0.5em;
+}
+nav a {
   text-decoration: none;
   color: #666;
-}
-nav .fas, nav .far, nav .fab {
-  min-width: 1.8em;
 }
 nav .navbar-title {
   text-transform: uppercase;
@@ -73,14 +77,15 @@ nav #menu-mobile {
   position: fixed;
   top: 71px;
   left: 100%;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  padding: 20px 0 0 15px;
   border-left: 1px solid #ddd;
   background-color: #fff;
 }
 nav #menu-mobile .menu {
-  margin-top: 2em;
-  padding-inline-start: 25px;
+  padding-inline-start: 0;
+  margin-block-start: 0;
 }
 nav #menu-mobile .menu li {
   padding: 10px;
@@ -95,12 +100,49 @@ nav #menu-mobile .menu, nav #menu-mobile .sub-menu {
   flex-direction: column;
 }
 nav #menu-mobile .sub-menu {
-  margin-top: 1em;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  margin-top: 0;
+  padding-inline-start: 0.5em;
 }
 nav #menu-mobile .sub-menu li {
   padding: 5px;
 }
+nav #menu-mobile .sub-menu a {
+  font-size: 1.2em;
+}
+nav #menu-mobile .has-sub-menu.show .sub-menu {
+  visibility: visible;
+  height: 100%;
+  opacity: 1;
+  margin-top: 0.5em;
+}
 
+.social-icons a {
+  background-color: #c5c5c5;
+  color: #fff;
+}
+
+#menu-mobile .social-icons {
+  max-width: 85%;
+  padding-left: 5px;
+}
+#menu-mobile .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+@media screen and (min-width: 1024px) {
+  nav #navbar-toggle {
+    display: none;
+  }
+}
 /*!
 Theme Name: David Matthew
 Theme URI: https://davidmatthew.ie
