@@ -1,3 +1,6 @@
+/**
+ * Navbar styling.
+ */
 
 nav {
     background-color: #fff;
@@ -22,12 +25,7 @@ nav {
     ul {
         list-style-type: none;
 
-        .fas, .far, .fab {
-            min-width: 1.8em;
-        }
-    
         .fa-angle-down {
-            min-width: unset;
             margin-left: 0.5em;
         }
     }
@@ -42,83 +40,130 @@ nav {
         font-weight: 600;
     }
 
-    #navbar-toggle {
+    .menu, .sub-menu {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 45px;
-        height: 35px;
-
-        div {
-            position: relative;
-            height: 5px;
-            background-image: linear-gradient(to right, #fb4141, #000000);
-            width: 100%;
-        }
-
-        div:nth-child(2) {
-            width: 80%;
-        }
     }
 
-    #menu-desktop {
+    .sub-menu {
         display: none;
+        flex-direction: column;
+        position: absolute;
+    }
+}
+
+#navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 45px;
+    height: 35px;
+
+    div {
+        position: relative;
+        height: 5px;
+        background-image: linear-gradient(to right, #fb4141, #000000);
+        width: 100%;
     }
 
-    #menu-mobile {
-        position: fixed;
-        top: 71px;
-        left: 100%;
-        width: 90%;
+    div:nth-child(2) {
+        width: 80%;
+    }
+}
+
+#menu-mobile {
+    position: fixed;
+    top: 71px;
+    left: 100%;
+    width: 90%;
+    height: calc(100% - 71px);
+    padding: 20px 15px;
+    border-left: 1px solid #ddd;
+    background-color: #fff;
+
+    .menu {
+        padding-inline-start: 0;
+        margin-block-start: 0;
+
+        li {
+            padding: 10px;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            font-size: 1.3em;
+        }            
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .sub-menu {
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+        margin-top: 0;
+        padding-inline-start: 0.5em;
+
+        li {
+            padding: 5px;
+        }
+
+        a {
+            font-size: 1.2em;
+        }
+    }
+
+    .menu, .sub-menu {
+        .fas, .far, .fab {
+            min-width: 1.8em;
+        }
+    }
+
+    .has-sub-menu.show + .sub-menu {
+        visibility: visible;
         height: 100%;
-        padding: 20px 0 0 15px;
-        border-left: 1px solid #ddd;
-        background-color: #fff;
+        opacity: 1;
+        margin-top: 0.5em;
+    }
+}
 
-        .menu {
-            padding-inline-start: 0;
-            margin-block-start: 0;
+#menu-desktop {
+    display: none;
 
-            li {
-                padding: 10px;
-            }
+    .menu {
+        flex-direction: row;
+        margin-block-end: 0;
+    }
 
-            a {
-                display: block;
-                width: 100%;
-                font-size: 1.3em;
-            }            
+    .menu, .sub-menu {
+        padding-inline-start: 0;
+        margin-block-start: 0;
+    }
+
+    .menu {
+        .fas, .far, .fab {
+            margin-right: 0.5em;
         }
+    }
 
-        .menu, .sub-menu {
-            display: flex;
-            flex-direction: column;
+    .sub-menu {
+        .fas, .far, .fab {
+            min-width: 1.8em;
         }
+    }
 
-        .sub-menu {
-            visibility: hidden;
-            height: 0;
-            opacity: 0;
-            margin-top: 0;
-            padding-inline-start: 0.5em;
+    a {
+        width: 100%;
+        font-size: 1.2em;
+        padding: 0 15px;
+    }
 
-            li {
-                padding: 5px;
-            }
-
-            a {
-                font-size: 1.2em;
-            }
-        }
-
-        .has-sub-menu.show {
-            .sub-menu {
-                visibility: visible;
-                height: 100%;
-                opacity: 1;
-                margin-top: 0.5em;
-            }  
+    li:last-child {
+        a {
+            padding-right: 0;
         }
     }
 }

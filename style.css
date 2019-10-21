@@ -1,3 +1,6 @@
+/**
+ * General page body styling.
+ */
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -18,6 +21,9 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
   margin-left: auto;
 }
 
+/**
+ * Navbar styling.
+ */
 nav {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
@@ -38,11 +44,7 @@ nav .logo img {
 nav ul {
   list-style-type: none;
 }
-nav ul .fas, nav ul .far, nav ul .fab {
-  min-width: 1.8em;
-}
 nav ul .fa-angle-down {
-  min-width: unset;
   margin-left: 0.5em;
 }
 nav a {
@@ -53,7 +55,16 @@ nav .navbar-title {
   text-transform: uppercase;
   font-weight: 600;
 }
-nav #navbar-toggle {
+nav .menu, nav .sub-menu {
+  display: flex;
+}
+nav .sub-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+}
+
+#navbar-toggle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,71 +72,99 @@ nav #navbar-toggle {
   width: 45px;
   height: 35px;
 }
-nav #navbar-toggle div {
+#navbar-toggle div {
   position: relative;
   height: 5px;
   background-image: linear-gradient(to right, #fb4141, #000000);
   width: 100%;
 }
-nav #navbar-toggle div:nth-child(2) {
+#navbar-toggle div:nth-child(2) {
   width: 80%;
 }
-nav #menu-desktop {
-  display: none;
-}
-nav #menu-mobile {
+
+#menu-mobile {
   position: fixed;
   top: 71px;
   left: 100%;
   width: 90%;
-  height: 100%;
-  padding: 20px 0 0 15px;
+  height: calc(100% - 71px);
+  padding: 20px 15px;
   border-left: 1px solid #ddd;
   background-color: #fff;
 }
-nav #menu-mobile .menu {
+#menu-mobile .menu {
   padding-inline-start: 0;
   margin-block-start: 0;
 }
-nav #menu-mobile .menu li {
+#menu-mobile .menu li {
   padding: 10px;
 }
-nav #menu-mobile .menu a {
+#menu-mobile .menu a {
   display: block;
   width: 100%;
   font-size: 1.3em;
 }
-nav #menu-mobile .menu, nav #menu-mobile .sub-menu {
-  display: flex;
+#menu-mobile .menu {
   flex-direction: column;
 }
-nav #menu-mobile .sub-menu {
+#menu-mobile .sub-menu {
   visibility: hidden;
   height: 0;
   opacity: 0;
   margin-top: 0;
   padding-inline-start: 0.5em;
 }
-nav #menu-mobile .sub-menu li {
+#menu-mobile .sub-menu li {
   padding: 5px;
 }
-nav #menu-mobile .sub-menu a {
+#menu-mobile .sub-menu a {
   font-size: 1.2em;
 }
-nav #menu-mobile .has-sub-menu.show .sub-menu {
+#menu-mobile .menu .fas, #menu-mobile .menu .far, #menu-mobile .menu .fab, #menu-mobile .sub-menu .fas, #menu-mobile .sub-menu .far, #menu-mobile .sub-menu .fab {
+  min-width: 1.8em;
+}
+#menu-mobile .has-sub-menu.show + .sub-menu {
   visibility: visible;
   height: 100%;
   opacity: 1;
   margin-top: 0.5em;
 }
 
+#menu-desktop {
+  display: none;
+}
+#menu-desktop .menu {
+  flex-direction: row;
+  margin-block-end: 0;
+}
+#menu-desktop .menu, #menu-desktop .sub-menu {
+  padding-inline-start: 0;
+  margin-block-start: 0;
+}
+#menu-desktop .menu .fas, #menu-desktop .menu .far, #menu-desktop .menu .fab {
+  margin-right: 0.5em;
+}
+#menu-desktop .sub-menu .fas, #menu-desktop .sub-menu .far, #menu-desktop .sub-menu .fab {
+  min-width: 1.8em;
+}
+#menu-desktop a {
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0 15px;
+}
+#menu-desktop li:last-child a {
+  padding-right: 0;
+}
+
+/**
+ * Styles for the social icons.
+ */
 .social-icons a {
   background-color: #c5c5c5;
   color: #fff;
 }
 
 #menu-mobile .social-icons {
-  max-width: 85%;
   padding-left: 5px;
 }
 #menu-mobile .social-icons a {
@@ -138,9 +177,45 @@ nav #menu-mobile .has-sub-menu.show .sub-menu {
   margin: 2px;
 }
 
+/**
+ * Responsive styles.
+ *
+ * Breakpoints: 375px, 425px, 768px, 1024px.
+ */
+@media screen and (min-width: 375px) {
+  #menu-mobile {
+    padding: 30px 20px;
+  }
+}
+@media screen and (min-width: 425px) {
+  #menu-mobile {
+    padding: 40px 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #menu-mobile {
+    padding: 40px;
+  }
+}
 @media screen and (min-width: 1024px) {
-  nav #navbar-toggle {
+  .container {
+    max-width: 1100px;
+  }
+
+  #menu-desktop {
+    display: flex;
+  }
+
+  #navbar-toggle,
+#menu-mobile {
     display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 /*!
