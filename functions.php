@@ -77,8 +77,7 @@ add_action( 'wp_enqueue_scripts', 'DM\Theme\enqueue_css' );
  * Enqueue/dequeue scripts.
  */
 function enqueue_js() {
-	wp_enqueue_script( 'animejs', 'https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js', array(), '3.1.0', true );
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'animejs' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), wp_get_theme()->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

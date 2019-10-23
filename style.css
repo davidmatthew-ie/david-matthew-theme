@@ -59,9 +59,7 @@ nav .menu, nav .sub-menu {
   display: flex;
 }
 nav .sub-menu {
-  display: none;
   flex-direction: column;
-  position: absolute;
 }
 
 #navbar-toggle {
@@ -137,12 +135,16 @@ nav .sub-menu {
   flex-direction: row;
   margin-block-end: 0;
 }
+#menu-desktop .menu .fas, #menu-desktop .menu .far, #menu-desktop .menu .fab {
+  margin-right: 0.4em;
+}
 #menu-desktop .menu, #menu-desktop .sub-menu {
   padding-inline-start: 0;
   margin-block-start: 0;
 }
-#menu-desktop .menu .fas, #menu-desktop .menu .far, #menu-desktop .menu .fab {
-  margin-right: 0.5em;
+#menu-desktop .sub-menu {
+  display: none;
+  position: absolute;
 }
 #menu-desktop .sub-menu .fas, #menu-desktop .sub-menu .far, #menu-desktop .sub-menu .fab {
   min-width: 1.8em;
@@ -150,7 +152,7 @@ nav .sub-menu {
 #menu-desktop a {
   width: 100%;
   font-size: 1.2em;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 #menu-desktop li:last-child a {
   padding-right: 0;
@@ -213,7 +215,7 @@ nav .sub-menu {
 }
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1280px;
+    max-width: 1330px;
     padding-left: 25px;
     padding-right: 25px;
   }

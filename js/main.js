@@ -11,43 +11,30 @@ document.addEventListener('DOMContentLoaded', function() {
     let menuIsHidden = true;
     navToggle.addEventListener('click', function() {
 
-        // Set our animation property values, to be used further below.
-        let animEase = 'easeOutQuart';
-        let animDuration = '600';
-        let menuLeftPos, navRotation, bar1TransY, bar1Rotation, bar2Width, bar2Opacity, bar3TransY, bar3Rotation;
+        let menuMobile = document.getElementById('menu-mobile');
+        let navbarToggler = document.getElementById('navbar-toggle');
+        let bar1 = document.querySelector('#navbar-toggle div:nth-child(1)');
+        let bar2 = document.querySelector('#navbar-toggle div:nth-child(2)');
+        let bar3 = document.querySelector('#navbar-toggle div:nth-child(3)');
 
-        // Initialize these values differently, depending on whether the menu is visible or off-screen.
         if (menuIsHidden) {
-            menuLeftPos = '10%';
-            navRotation = '360deg';
-            bar1TransY = '15px';
-            bar1Rotation = '-45deg';
-            bar2Width = '0';
-            bar2Opacity = '0';
-            bar3TransY = '-15px';
-            bar3Rotation = '45deg';
+            menuMobile.style.left = '10%';
+            navbarToggler.style.transform = 'rotate(360deg)';
+            bar1.style.transform = 'translateY(15px) rotate(-45deg)';
+            bar2.style.width = '0';
+            bar2.style.opacity = '0';
+            bar3.style.transform = 'translateY(-15px) rotate(45deg)';
         } else {
-            menuLeftPos = '100%';
-            navRotation = '0deg';
-            bar1TransY = '0';
-            bar1Rotation = '0deg';
-            bar2Width = '80%';
-            bar2Opacity = '1';
-            bar3TransY = '0';
-            bar3Rotation = '0deg';
+            menuMobile.style.left = '100%';
+            navbarToggler.style.transform = 'rotate(0deg)';
+            bar1.style.transform = 'translateY(0) rotate(0deg)';
+            bar2.style.width = '80%';
+            bar2.style.opacity = '1';
+            bar3.style.transform = 'translateY(0) rotate(0deg)';
         }
 
-        // Begin the anime.js functions.
-        anime({ targets: '#menu-mobile', left: menuLeftPos, easing: animEase, duration: animDuration });
-        anime({ targets: '#navbar-toggle', rotate: navRotation, easing: animEase, duration: animDuration });
-        anime({ targets: '#navbar-toggle div:nth-child(1)', translateY: bar1TransY, rotate: bar1Rotation, easing: animEase, duration: animDuration });
-        anime({ targets: '#navbar-toggle div:nth-child(2)', width: bar2Width, opacity: bar2Opacity, easing: animEase, duration: animDuration });
-        anime({ targets: '#navbar-toggle div:nth-child(3)', translateY: bar3TransY, rotate: bar3Rotation, easing: animEase, duration: animDuration });
-
-        // Set the menu display boolean to its opposite.
-        menuIsHidden = !menuIsHidden; 
+        menuIsHidden = !menuIsHidden;
     });
-
 
     /**
      * Functionality for toggling submenu items.

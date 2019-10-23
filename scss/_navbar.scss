@@ -45,9 +45,7 @@ nav {
     }
 
     .sub-menu {
-        display: none;
         flex-direction: column;
-        position: absolute;
     }
 }
 
@@ -136,6 +134,10 @@ nav {
     .menu {
         flex-direction: row;
         margin-block-end: 0;
+
+        .fas, .far, .fab {
+            margin-right: 0.4em;
+        }
     }
 
     .menu, .sub-menu {
@@ -143,13 +145,10 @@ nav {
         margin-block-start: 0;
     }
 
-    .menu {
-        .fas, .far, .fab {
-            margin-right: 0.5em;
-        }
-    }
-
     .sub-menu {
+        display: none;
+        position: absolute;
+
         .fas, .far, .fab {
             min-width: 1.8em;
         }
@@ -158,7 +157,7 @@ nav {
     a {
         width: 100%;
         font-size: 1.2em;
-        padding: 0 15px;
+        padding: 0 20px;
     }
 
     li:last-child {
