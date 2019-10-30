@@ -1,12 +1,19 @@
 /**
  * Responsive styles.
  *
- * Breakpoints: 375px, 425px, 768px, 1024px.
+ * Breakpoints: 375px, 425px, 768px, 1024px, 1280px.
  */
 
 @media screen and (min-width: 375px) {
     #menu-mobile {
         padding: 30px 20px;
+
+        .social-icons {
+            a {
+                width: 45px;
+                height: 45px;
+            }
+        }
     } 
       
 }
@@ -20,14 +27,10 @@
 @media screen and (min-width: 768px) {
     #menu-mobile {
         padding: 40px;
-    }  
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    .container {
-        max-width: 1100px;
-    }
-    
     #menu-desktop {
         display: flex;
     }
@@ -36,6 +39,17 @@
     #menu-mobile {
         display: none;
     }
+
+    .container {
+        max-width: 1100px;
+    }
+
+    #homepage-content {
+        .col {
+            //width: 50%;
+            flex-basis: 50%;
+        }
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -43,7 +57,6 @@
         max-width: 1330px;
         padding-left: 25px;
         padding-right: 25px;
-    }
-    
+    }  
 }
 

@@ -6,12 +6,17 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
+body, html {
+    height: 100%;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
-    font-family: 'Source Sans Pro', sans-serif;
+body {
+    margin: 0;   
+}
+
+.content-area {
+    margin-top: 70px;
+    padding-top: 15px;
 }
 
 .container {
@@ -20,4 +25,22 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.bg-img-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
 }

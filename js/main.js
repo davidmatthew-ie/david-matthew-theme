@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /**
-     * Functionality for toggling submenu items.
+     * Functionality for toggling submenu items  on mobile.
      */
     let submenus = document.querySelectorAll('.has-sub-menu');
     for (let i = 0; i < submenus.length; i++) {

@@ -14,7 +14,7 @@ $menu_args = array(
 
 ?>
 
-<nav role="navigation" aria-label="main navigation">
+<nav class="nav" role="navigation" aria-label="main navigation">
 
 	<div class="navbar container">
 
@@ -46,15 +46,81 @@ $menu_args = array(
 
 		<div class="social-icons">
 
-			<a href="#"><i class="fab fa-linkedin-in"></i></a>
+			<?php
 
-			<a href="#"><i class="fas fa-code"></i></a>
+			if ( ! empty( get_theme_mod( 'social_link_1' ) ) ) {
+				?>
 
-			<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="<?php echo esc_url( get_theme_mod( 'social_link_1' ) ); ?>" target="_blank">
 
-			<a href="#"><i class="fab fa-instagram"></i></a>
+					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_1' ) ); ?>"></i>
 
-			<a href="#"><i class="fab fa-twitter"></i></a>
+				</a>
+
+				<?php
+			}
+
+			if ( ! empty( get_theme_mod( 'social_link_2' ) ) ) {
+				?>
+
+				<a href="<?php echo esc_url( get_theme_mod( 'social_link_2' ) ); ?>" target="_blank">
+
+					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_2' ) ); ?>"></i>
+
+				</a>
+
+				<?php
+			}
+
+			if ( ! empty( get_theme_mod( 'social_link_3' ) ) ) {
+				?>
+
+				<a href="<?php echo esc_url( get_theme_mod( 'social_link_3' ) ); ?>" target="_blank">
+
+					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_3' ) ); ?>"></i>
+
+				</a>
+
+				<?php
+			}
+
+			if ( ! empty( get_theme_mod( 'social_link_4' ) ) ) {
+				?>
+
+				<a href="<?php echo esc_url( get_theme_mod( 'social_link_4' ) ); ?>" target="_blank">
+
+					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_4' ) ); ?>"></i>
+
+				</a>
+
+				<?php
+			}
+
+			if ( ! empty( get_theme_mod( 'social_link_5' ) ) ) {
+				?>
+
+				<a href="<?php echo esc_url( get_theme_mod( 'social_link_5' ) ); ?>" target="_blank">
+
+					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_5' ) ); ?>"></i>
+
+				</a>
+
+				<?php
+			}
+
+			if ( ! empty( get_theme_mod( 'social_link_6' ) ) ) {
+				?>
+
+				<a href="<?php echo esc_url( get_theme_mod( 'social_link_6' ) ); ?>" target="_blank">
+
+					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_6' ) ); ?>"></i>
+
+				</a>
+
+				<?php
+			}
+
+			?>
 
 		</div>
 

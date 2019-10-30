@@ -46,7 +46,7 @@ function setup() {
 add_action( 'after_setup_theme', 'DM\Theme\setup' );
 
 /**
- * Register widget area.
+ * Register the widget area.
  */
 function widgets_init() {
 	register_sidebar(
@@ -67,6 +67,7 @@ add_action( 'widgets_init', 'DM\Theme\widgets_init' );
  * Enqueue CSS.
  */
 function enqueue_css() {
+	//wp_enqueue_style( 'bulma', 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css', array(), '0.7.5' );
 	wp_enqueue_style( 'fontawesome-5', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css', array(), '5.11.2' );
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,900&display=swap', array(), wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_style( 'david-matthew-ie', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
@@ -85,5 +86,8 @@ function enqueue_js() {
 }
 add_action( 'wp_enqueue_scripts', 'DM\Theme\enqueue_js' );
 
-// Retrieve the custom navigation walker class.
+// Require the customizer file.
+require 'customizer.php';
+
+// Require the custom nav walker class.
 require 'classes/class-walker.php';
