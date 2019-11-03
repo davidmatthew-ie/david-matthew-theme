@@ -15,8 +15,10 @@ body {
 }
 
 .content-area {
-    margin-top: 70px;
-    padding-top: 15px;
+    padding-top: 85px;
+    padding-bottom: 15px;
+    min-height: 100%;
+    z-index: 1;
 }
 
 .container {
@@ -25,10 +27,11 @@ body {
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
+    overflow: hidden;
 }
 
 .bg-img-full {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -43,4 +46,15 @@ body {
     height: 100%;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+    display: flex;
+    height: 70px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+
+    p {
+        margin: auto;
+    }
 }

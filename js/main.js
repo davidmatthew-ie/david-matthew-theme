@@ -45,5 +45,19 @@ document.addEventListener('DOMContentLoaded', function() {
             submenus[i].classList.toggle('show');
         });
     }
+
+    /**
+     * Slider functionality.
+     */
+    const slider = tns({
+        container: '#slider',
+        items: 1,
+        slideBy: 'page',
+        navPosition: 'bottom',
+        mouseDrag: true,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        controls: false
+    });
     
 });

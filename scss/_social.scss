@@ -4,8 +4,11 @@
 
 .social-icons {
     a {
-        background-color: #c5c5c5;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         color: #fff;
+        border-radius: 50%;
     }
 }
 
@@ -14,13 +17,28 @@
         padding-left: 5px;
     
         a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
+            background-color: #c5c5c5;
             margin: 3px;
+        }
+    }
+}
+
+#homepage-content {
+    .social-icons {
+        display: none;
+
+        a {
+            width: 50px;
+            height: 50px;
+            margin: 3px;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.25);
+            }
         }
     }
 }

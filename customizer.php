@@ -49,6 +49,92 @@ function customize( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting( 'heading_pt_1' );
+	$wp_customize->add_control(
+		new \WP_Customize_Control(
+			$wp_customize,
+			'heading_pt_1_ctl',
+			array(
+				'label'    => __( 'Heading (first line)', 'david-matthew' ),
+				'type'     => 'text',
+				'section'  => 'home_options',
+				'settings' => 'heading_pt_1',
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'heading_pt_1' );
+	$wp_customize->add_control(
+		new \WP_Customize_Control(
+			$wp_customize,
+			'heading_pt_1_ctl',
+			array(
+				'label'    => __( 'Heading (first line)', 'david-matthew' ),
+				'type'     => 'text',
+				'section'  => 'home_options',
+				'settings' => 'heading_pt_1',
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'heading_pt_2' );
+	$wp_customize->add_control(
+		new \WP_Customize_Control(
+			$wp_customize,
+			'heading_pt_2_ctl',
+			array(
+				'label'    => __( 'Heading (second line)', 'david-matthew' ),
+				'type'     => 'text',
+				'section'  => 'home_options',
+				'settings' => 'heading_pt_2',
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'intro' );
+	$wp_customize->add_control(
+		new \WP_Customize_Control(
+			$wp_customize,
+			'intro_ctl',
+			array(
+				'label'    => __( 'Introduction', 'david-matthew' ),
+				'type'     => 'textarea',
+				'section'  => 'home_options',
+				'settings' => 'intro',
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'blog_url' );
+	$wp_customize->add_control(
+		new \WP_Customize_Control(
+			$wp_customize,
+			'blog_url_ctl',
+			array(
+				'label'    => __( 'The URL to view all posts', 'david-matthew' ),
+				'type'     => 'url',
+				'section'  => 'home_options',
+				'settings' => 'blog_url',
+			)
+		)
+	);
+
+	for ( $i = 1; $i <= 3; $i++ ) {
+		$wp_customize->add_setting( 'feat_post_' . $i );
+		$wp_customize->add_control(
+			new \WP_Customize_Control(
+				$wp_customize,
+				'feat_post_' . $i . '_ctl',
+				array(
+					'label'    => __( 'Featured Post ' . $i . ' ID', 'david-matthew' ),
+					'type'     => 'number',
+					'section'  => 'home_options',
+					'settings' => 'feat_post_' . $i,
+				)
+			)
+		);
+	}
+
 	// Social links section.
 	$wp_customize->add_section(
 		'social_options',

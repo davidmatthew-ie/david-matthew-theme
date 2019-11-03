@@ -7,7 +7,11 @@
 
 ?>
 
-<footer></footer>
+<footer>
+
+	<p>&copy; David Matthew <?php echo esc_html( date( 'Y' ) ); ?></p>
+
+</footer>
 
 <?php wp_footer(); ?>
 

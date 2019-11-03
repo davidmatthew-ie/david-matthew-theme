@@ -15,37 +15,36 @@ get_header();
 
 </div>
 
-<div id="primary" class="container content-area">
+<main id="homepage-content" class="container content-area">
 
-	<main id="main" class="site-main">
+	<div class="row">
 
-		<div id="homepage-content">
+		<div class="col">
 
-			<div class="col">
+			<h1 class="animated fadeInDown">
 
-				<h1 class="heading-large text-center">
+				<span id="heading-first" class="text-gradient-black-red"><?php echo esc_html( get_theme_mod( 'heading_pt_1' ) ); ?></span><br>
 
-					<span id="heading-first" class="text-gradient-black-red">Hello &</span><br>
+				<span id="heading-second" class="text-gradient-black-red"><span class="underscore blinking"></span><?php echo esc_html( get_theme_mod( 'heading_pt_2' ) ); ?></span>
 
-					<span id="heading-second" class="text-gradient-black-red">Welcome!</span>
+			</h1>
 
-				</h1>
+			<p id="intro" class="animated fadeInUp"><?php echo wp_kses_post( get_theme_mod( 'intro' ) ); ?></p>
 
-				<p>Thanks for visiting my website. I'm David, and I like to write code, music and words. Thanks for visiting my website. I'm David, and I like to write code, music and words.</p>
-
-			</div>
-
-			<div class="col">
-
-				<p>Some pretend content.</p>
-
-			</div>
+			<?php get_template_part( 'partials/social' ); ?>
 
 		</div>
 
-	</main>
+		<div class="col">
 
-</div>
+			<?php get_template_part( 'partials/slider' ); ?>
+
+		</div>
+
+	</div>
+
+
+</main>
 
 <?php
 

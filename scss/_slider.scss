@@ -1,0 +1,117 @@
+/**
+ * Slider styling.
+ */
+
+
+.slider-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    h2 {
+        margin: 0 0 0.15em 0;
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.15em;
+
+        i {
+            margin-right: 0.25em;
+        }
+    }
+}
+
+.tns-nav {
+    text-align: center;
+
+    button {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: none;
+        margin: 10px 4px 0 4px;
+        background-color: #aaa;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .tns-nav-active {
+        background-color: #fff;
+    }
+}
+
+.post-preview {
+    position: relative;
+    height: 120px;
+    border-left: 5px solid #fb4141;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .post-div {
+        position: absolute;
+
+        h3 {
+            font-size: 1em;
+            font-weight: 900;
+            color: #333;  
+        }
+
+        p {
+            color: #666;
+        }
+
+        i {
+            margin-right: 0.25em;
+        }
+
+        h3, p {
+            margin: 0;
+        }
+
+        .post-date,
+        .read-more-tablet,
+        .read-more-desktop {
+            display: none;
+        }
+
+        .read-more-mobile {
+            margin-top: 0.2em;
+            font-size: 0.9em;
+        }
+
+        img {
+            width: 90px;
+            height: 90px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+
+    .post-div:nth-child(1) {
+        top: 11px;
+        left: 13px;
+        width: 54%;
+    }
+
+    .post-div:nth-child(2) {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+.right-corner {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    width: 0; 
+    height: 0; 
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent; 
+    border-right: 25px solid #fb4141; 
+}
+

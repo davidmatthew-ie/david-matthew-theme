@@ -1,7 +1,5 @@
 /**
  * Responsive styles.
- *
- * Breakpoints: 375px, 425px, 768px, 1024px, 1280px.
  */
 
 @media screen and (min-width: 375px) {
@@ -14,49 +12,303 @@
                 height: 45px;
             }
         }
-    } 
+    }
+
+    #homepage-content {
+        .row {
+            margin-top: 12vh;
+        }
+
+        .col {
+            margin-bottom: 9vh;
+
+            h1 {
+                font-size: 3em;
+            }
+        }
+    }
       
 }
 
 @media screen and (min-width: 425px) {
+    p {
+        font-size: 1.1em;
+    }
+
     #menu-mobile {
         padding: 40px 30px;
-    } 
+    }
+
+    #homepage-content {
+        .col {
+            #intro {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    .slider-header {    
+        h2 {
+            margin: 0 0 0.2em 0;
+            font-size: 1.3em;
+        }
+    }
+
+    .tns-nav {
+        button {
+            height: 18px;
+            width: 18px;
+            margin: 15px 4px 0 4px;
+        }
+    }
+
+    .post-preview {
+        height: 140px;
+    
+        .post-div {    
+            h3 {
+                font-size: 1.1em;
+            }
+    
+            .read-more-mobile {
+                margin-top: 0.2em;
+                font-size: 1em;
+            }
+    
+            img {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    
+        .post-div:first-child {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #homepage-content {
+        .row {
+            padding: 0 5%;
+        }
+
+        .col {
+            h1 {
+                font-size: 4em;
+            }
+
+            #intro {
+                font-size: 1.2em;
+            }
+        }
+
+        .slider-header {    
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+
+        .post-preview {
+            height: 160px;
+        
+            .post-div {    
+                h3 {
+                    font-size: 1.2em;
+                    margin-bottom: 0.5em;
+                }
+
+                .post-date {
+                    color: #b3b3b3;
+                }
+                
+                .post-date,
+                .read-more-tablet p {
+                    font-size: 0.9em;
+                }
+
+                .post-date,
+                .read-more-tablet {
+                    display: block;
+                    margin-top: 0.25em;
+                }
+        
+                .read-more-mobile {
+                    display: none;
+                }
+        
+                img {
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+        
+            .post-div:first-child {
+                width: 65%;
+            }
+        }
+    }
+
 }
 
 @media screen and (min-width: 768px) {
     #menu-mobile {
         padding: 40px;
+
+        .menu {
+            a {
+                font-size: 1.5em;
+            }
+        }
+
+        .sub-menu {
+            a {
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    #homepage-content {
+        .row {
+            padding: 0 12%;
+            margin-top: 15vh;
+        }
+
+        .col {
+            h1 {
+                font-size: 5em;
+            }
+        }
     }
 }
 
 @media screen and (min-width: 1024px) {
-    #menu-desktop {
-        display: flex;
-    }
-
-    #navbar-toggle,
-    #menu-mobile {
-        display: none;
-    }
-
     .container {
         max-width: 1100px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    #menu-mobile {
+        padding: 50px;
+
+        .menu {
+            a {
+                font-size: 1.75em;
+            }
+        }
+
+        .sub-menu {
+            a {
+                font-size: 1.5em;
+            }
+        }
     }
 
     #homepage-content {
+        .row {
+            padding: 0 15%;
+        }
+
         .col {
-            //width: 50%;
-            flex-basis: 50%;
+            #intro {
+                padding: 0 15%;
+            }
+        }
+
+        .slider-header {    
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        .post-preview {
+            height: 250px;
+        
+            .post-div {    
+                h3 {
+                    font-size: 1.4em;
+                    margin-bottom: 0.6em;
+                }
+
+                .read-more-tablet {
+                    display: none;
+                }
+
+                .read-more-desktop {
+                    display: block;
+                }
+                
+                .post-date,
+                .read-more-desktop p {
+                    font-size: 1.1em;
+                    margin-top: 0.3em;
+                }
+        
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+
+            .post-div:nth-child(1) {
+                top: 15px;
+                left: 17px;
+            }
+        
+            .post-div:nth-child(2) {
+                top: 20px;
+                right: 20px;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1280px) {
+    #menu-desktop {
+        display: flex;
+    }
+
+    #menu-mobile,
+    #navbar-toggle {
+        display: none;
+    }
+
     .container {
-        max-width: 1330px;
-        padding-left: 25px;
-        padding-right: 25px;
-    }  
+        max-width: 1400px;
+    }
+
+    #homepage-content {
+        .row {
+            padding: 0;
+            margin-top: 18vh;
+        }
+        .col {
+            flex-basis: 50%;
+            max-width: 50%;
+
+            h1 {
+                font-size: 5.25em;
+                text-align: left;
+
+                .underscore {
+                    display: inline-block;
+                }
+            }
+    
+            #intro {
+                text-align: left;
+                padding: 0;
+                margin-left: 48px;
+                max-width: 500px;
+                font-size: 1.3em;
+            }
+
+            .social-icons {
+                display: block;
+                margin-left: 42px;
+            }
+        }
+    }
 }
 

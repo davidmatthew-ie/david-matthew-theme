@@ -6,10 +6,13 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.heading-large {
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 3em;
+p {
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+a {
+    text-decoration: none;
 }
 
 .text-gradient-black-red {
@@ -18,7 +21,6 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
     -webkit-text-fill-color: transparent;
 }
 
-.text-center {
-    text-align: center;
+.text-red {
+    color: #fb4141;
 }
-

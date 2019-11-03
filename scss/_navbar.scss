@@ -8,9 +8,11 @@
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100%;
     height: 70px;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
+    z-index: 2;
 
     .navbar {
         display: flex;
@@ -36,7 +38,6 @@
     }
 
     a {
-        text-decoration: none;
         color: #666;
     }
 
@@ -148,6 +149,7 @@
     .menu {
         flex-direction: row;
         margin-block-end: 0;
+        margin-right: -18px;
 
         .fas, .far, .fab {
             margin-right: 0.4em;

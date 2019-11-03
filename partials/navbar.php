@@ -42,87 +42,13 @@ $menu_args = array(
 
 	<div id="menu-mobile">
 
-		<?php wp_nav_menu( $menu_args ); ?>
+		<?php
 
-		<div class="social-icons">
+		wp_nav_menu( $menu_args );
 
-			<?php
+		get_template_part( 'partials/social' );
 
-			if ( ! empty( get_theme_mod( 'social_link_1' ) ) ) {
-				?>
-
-				<a href="<?php echo esc_url( get_theme_mod( 'social_link_1' ) ); ?>" target="_blank">
-
-					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_1' ) ); ?>"></i>
-
-				</a>
-
-				<?php
-			}
-
-			if ( ! empty( get_theme_mod( 'social_link_2' ) ) ) {
-				?>
-
-				<a href="<?php echo esc_url( get_theme_mod( 'social_link_2' ) ); ?>" target="_blank">
-
-					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_2' ) ); ?>"></i>
-
-				</a>
-
-				<?php
-			}
-
-			if ( ! empty( get_theme_mod( 'social_link_3' ) ) ) {
-				?>
-
-				<a href="<?php echo esc_url( get_theme_mod( 'social_link_3' ) ); ?>" target="_blank">
-
-					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_3' ) ); ?>"></i>
-
-				</a>
-
-				<?php
-			}
-
-			if ( ! empty( get_theme_mod( 'social_link_4' ) ) ) {
-				?>
-
-				<a href="<?php echo esc_url( get_theme_mod( 'social_link_4' ) ); ?>" target="_blank">
-
-					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_4' ) ); ?>"></i>
-
-				</a>
-
-				<?php
-			}
-
-			if ( ! empty( get_theme_mod( 'social_link_5' ) ) ) {
-				?>
-
-				<a href="<?php echo esc_url( get_theme_mod( 'social_link_5' ) ); ?>" target="_blank">
-
-					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_5' ) ); ?>"></i>
-
-				</a>
-
-				<?php
-			}
-
-			if ( ! empty( get_theme_mod( 'social_link_6' ) ) ) {
-				?>
-
-				<a href="<?php echo esc_url( get_theme_mod( 'social_link_6' ) ); ?>" target="_blank">
-
-					<i class="<?php echo esc_html( get_theme_mod( 'social_icon_6' ) ); ?>"></i>
-
-				</a>
-
-				<?php
-			}
-
-			?>
-
-		</div>
+		?>
 
 	</div>
 
