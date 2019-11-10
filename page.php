@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying generic pages.
  *
  * @package David_Matthew_IE
  */
@@ -8,27 +8,20 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area">
-    
-    <main id="main" class="site-main">
+<main id="page" class="container content-area">
 
-    <?php
-    while ( have_posts() ) :
-        the_post();
+	<?php
+	while ( have_posts() ) :
+		the_post();
 
-        get_template_part( 'partials/content', 'page' );
+		get_template_part( 'partials/content', 'page' );
 
-        if ( comments_open() || get_comments_number() ) :
-            comments_template();
-        endif;
+		get_sidebar();
 
-    endwhile;
-    ?>
+	endwhile;
+	?>
 
-    </main>
-
-</div><!-- #primary -->
+</main>
 
 <?php
-get_sidebar();
 get_footer();

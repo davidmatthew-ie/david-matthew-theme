@@ -58,7 +58,7 @@
 
         h3 {
             font-size: 1em;
-            font-weight: 900;
+            font-weight: 700;
             color: #333;  
         }
 
@@ -75,9 +75,16 @@
         }
 
         .post-date,
+        .post-tags,
         .read-more-tablet,
         .read-more-desktop {
             display: none;
+        }
+
+        .post-date,
+        .post-tags {
+            color: #b3b3b3;
+            font-style: italic;
         }
 
         .read-more-mobile {
@@ -88,7 +95,6 @@
         img {
             width: 90px;
             height: 90px;
-            border-bottom-left-radius: 10px;
         }
     }
 
@@ -103,15 +109,3 @@
         right: 15px;
     }
 }
-
-.right-corner {
-    position: absolute;
-    bottom: -25px;
-    right: 0;
-    width: 0; 
-    height: 0; 
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent; 
-    border-right: 25px solid #fb4141; 
-}
-

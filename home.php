@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<div class="bg-img-full" style="background-image: url('<?php echo esc_url( get_theme_mod( 'home_bg_img' ) ); ?>')">
+<div class="bg-img-full kb-zoom" style="background-image: url('<?php echo esc_url( get_theme_mod( 'home_bg_img' ) ); ?>')">
 
 	<div class="overlay"></div>
 
@@ -21,13 +21,24 @@ get_header();
 
 		<div class="col">
 
-			<h1 class="animated fadeInDown">
+			<div id="title">
 
-				<span id="heading-first" class="text-gradient-black-red"><?php echo esc_html( get_theme_mod( 'heading_pt_1' ) ); ?></span><br>
+				<div class="img-wrap animated fadeInLeft">
 
-				<span id="heading-second" class="text-gradient-black-red"><span class="underscore blinking"></span><?php echo esc_html( get_theme_mod( 'heading_pt_2' ) ); ?></span>
+					<img src="<?php echo esc_url( get_theme_mod( 'home_profile_img' ) ); ?>" alt="David Matthew">
 
-			</h1>
+				</div>
+
+				<h1 class="animated fadeInDown">
+
+					<span id="heading-first" class="text-gradient-black-red"><?php echo esc_html( get_theme_mod( 'heading_pt_1' ) ); ?></span><br>
+
+					<span id="heading-second" class="text-gradient-black-red"><?php echo esc_html( get_theme_mod( 'heading_pt_2' ) ); ?></span>
+
+				</h1>
+
+			</div>
+
 
 			<p id="intro" class="animated fadeInUp"><?php echo wp_kses_post( get_theme_mod( 'intro' ) ); ?></p>
 

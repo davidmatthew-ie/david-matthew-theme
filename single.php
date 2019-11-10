@@ -8,29 +8,27 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area">
-		
-	<main id="main" class="site-main">
+<main id="single-post" class="container content-area">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	<?php
+	while ( have_posts() ) :
+		the_post();
 
-			get_template_part( 'partials/content', get_post_type() );
+		get_template_part( 'partials/content', get_post_type() );
 
-			the_post_navigation();
+		// the_post_navigation();
 
-			if ( comments_open() || get_comments_number() ) {
-				comments_template();
-			}
+		get_sidebar();
 
-		endwhile;
-		?>
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
 
-	</main>
+	endwhile;
 
-</div><!-- #primary -->
+	?>
+
+</main>
 
 <?php
-get_sidebar();
 get_footer();

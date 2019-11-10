@@ -71,6 +71,21 @@
 	}
 }
 
+.kb-zoom {
+	animation-name: kb-zoom;
+	animation-duration: 12s;
+}
+
+@keyframes kb-zoom {
+	from {
+		transform: scale(1.0);
+	}
+
+	to {
+		transform: scale(1.1);
+	}
+}
+
 #homepage-content {
     .social-icons {
         @for $i from 1 through 6 {

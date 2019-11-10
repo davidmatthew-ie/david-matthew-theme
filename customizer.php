@@ -49,6 +49,20 @@ function customize( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting( 'home_profile_img' );
+	$wp_customize->add_control(
+		new \WP_Customize_Control(
+			$wp_customize,
+			'home_profile_img_ctl',
+			array(
+				'label'    => __( 'Profile Image URL', 'david-matthew' ),
+				'type'     => 'url',
+				'section'  => 'home_options',
+				'settings' => 'home_profile_img',
+			)
+		)
+	);
+
 	$wp_customize->add_setting( 'heading_pt_1' );
 	$wp_customize->add_control(
 		new \WP_Customize_Control(

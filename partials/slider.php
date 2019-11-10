@@ -50,7 +50,7 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 						<div class="read-more-tablet">
 
-							<?php echo wp_kses_post( substr( $feat_post->post_content, 0, 85 ) ) . '...'; ?>
+							<?php echo wp_kses_post( substr( $feat_post->post_content, 0, 110 ) ) . '...'; ?>
 
 							<span class="text-red">[read more]</span>
 
@@ -70,6 +70,28 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 						</div>
 
+						<div class="post-tags">
+
+							<i class="fas fa-list-ul"></i>
+
+							<span>
+
+								<?php
+
+								$feat_post_tags = get_the_tags( $feat_post->ID );
+								$feat_post_tag_names = [];
+								foreach ( $feat_post_tags as $fpt ) {
+									array_push( $feat_post_tag_names, $fpt->name );
+								}
+
+								echo esc_html( implode( ', ', $feat_post_tag_names ) );
+
+								?>
+
+							</span>
+
+						</div>
+
 					</div>
 
 					<div class="post-div">
@@ -77,8 +99,6 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 						<img src="<?php echo esc_url( get_the_post_thumbnail_url( $feat_post->ID, 'thumbnail' ) ); ?>" alt="<?php echo esc_html( $feat_post->post_title ); ?>"/>
 
 					</div>
-
-					<div class="right-corner"></div>
 
 				</div>
 
