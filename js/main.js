@@ -49,15 +49,23 @@ document.addEventListener('DOMContentLoaded', function() {
     /**
      * Slider functionality.
      */
-    const slider = tns({
-        container: '#slider',
-        items: 1,
-        slideBy: 'page',
-        navPosition: 'bottom',
-        mouseDrag: true,
-        autoplay: true,
-        autoplayButtonOutput: false,
-        controls: false
-    });
-    
+    const sliderExists = document.getElementById('slider');
+    if (sliderExists) {
+        const slider = tns({
+            container: '#slider',
+            items: 1,
+            slideBy: 'page',
+            navPosition: 'bottom',
+            mouseDrag: true,
+            autoplay: true,
+            autoplayButtonOutput: false,
+            controls: false
+        });
+    }
+
+    /**
+     * Set the CDN autoloader language path for Prism.
+     */
+    Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/';
+
 });

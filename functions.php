@@ -82,7 +82,7 @@ function enqueue_js() {
 	wp_enqueue_script( 'prism-core', 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js', array(), '1.17.1', true );
 	wp_enqueue_script( 'prism-autoloader', 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js', array( 'prism-core' ), '1.17.1', true );
 	wp_enqueue_script( 'tiny-slider', 'https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', array(), '2.9.2', true );
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'tiny-slider' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'tiny-slider', 'prism-autoloader' ), wp_get_theme()->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

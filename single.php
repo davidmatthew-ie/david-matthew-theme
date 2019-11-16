@@ -16,8 +16,6 @@ get_header();
 
 		get_template_part( 'partials/content', get_post_type() );
 
-		// the_post_navigation();
-
 		get_sidebar();
 
 		if ( comments_open() || get_comments_number() ) {

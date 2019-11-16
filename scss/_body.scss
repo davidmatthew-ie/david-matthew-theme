@@ -52,6 +52,7 @@ body {
 #page,
 #single-post{
     display: flex;
+    flex-flow: row wrap;
 }
 
 aside,

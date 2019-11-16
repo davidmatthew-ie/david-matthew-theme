@@ -9,44 +9,43 @@ get_header();
 ?>
 
 <div id="primary" class="content-area">
-    
-    <main id="main" class="site-main">
 
-    <?php
-    if ( have_posts() ) :
-        ?>
+	<main id="main" class="site-main">
 
-        <header class="page-header">
-            
-            <h1 class="page-title">
-                <?php
-                /* translators: %s: search query. */
-                printf( esc_html__( 'Search Results for: %s', 'david-matthew' ), '<span>' . get_search_query() . '</span>' );
-                ?>
-            </h1>
+	<?php
+	if ( have_posts() ) :
+		?>
 
-        </header>
+		<header class="page-header">
 
-        <?php
-        while ( have_posts() ) :
-            the_post();
-            get_template_part( 'partials/content', 'search' );
+			<h1 class="page-title">
+				<?php
+				/* translators: %s: search query. */
+				printf( esc_html__( 'Search Results for: %s', 'david-matthew' ), '<span>' . get_search_query() . '</span>' );
+				?>
+			</h1>
 
-        endwhile;
+		</header>
 
-        the_posts_navigation();
+		<?php
+		while ( have_posts() ) :
+			the_post();
+			get_template_part( 'partials/content', 'search' );
 
-    else :
+		endwhile;
 
-        get_template_part( 'partials/content', 'none' );
+		the_posts_navigation();
 
-    endif;
-    ?>
+	else :
 
-    </main>
+		get_template_part( 'partials/content', 'none' );
+
+	endif;
+	?>
+
+	</main>
 
 </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
