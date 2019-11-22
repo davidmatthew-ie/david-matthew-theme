@@ -6,27 +6,33 @@
  */
 
 get_header();
+
 ?>
 
-<main id="single-post" class="container content-area">
+<div class="container content-area flex-row entry-header-offset">
 
-	<?php
-	while ( have_posts() ) :
-		the_post();
+	<main id="primary">
 
-		get_template_part( 'partials/content', get_post_type() );
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-		get_sidebar();
+			get_template_part( 'partials/content', get_post_type() );
 
-		if ( comments_open() || get_comments_number() ) {
-			comments_template();
-		}
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
 
-	endwhile;
+		endwhile;
+		?>
 
-	?>
+	</main>
 
-</main>
+	<?php get_sidebar(); ?>
+
+</div>
 
 <?php
+
 get_footer();
+

@@ -11,7 +11,7 @@ get_header();
 
 <div class="bg-img-full kb-zoom" style="background-image: url('<?php echo esc_url( get_theme_mod( 'home_bg_img' ) ); ?>')">
 
-	<div class="overlay"></div>
+	<div class="overlay" style="background-color: rgba(255, 255, 255, <?php echo esc_attr( get_theme_mod( 'home_bg_opacity' ) ); ?>)"></div>
 
 </div>
 
@@ -53,7 +53,6 @@ get_header();
 		</div>
 
 	</div>
-
 
 </main>
 

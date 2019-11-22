@@ -49,6 +49,20 @@ function customize( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting( 'home_bg_opacity' );
+	$wp_customize->add_control(
+		new \WP_Customize_Control(
+			$wp_customize,
+			'home_bg_opacity_ctl',
+			array(
+				'label'    => __( 'Overlay Opacity', 'david-matthew' ),
+				'type'     => 'number',
+				'section'  => 'home_options',
+				'settings' => 'home_bg_opacity',
+			)
+		)
+	);
+
 	$wp_customize->add_setting( 'home_profile_img' );
 	$wp_customize->add_control(
 		new \WP_Customize_Control(

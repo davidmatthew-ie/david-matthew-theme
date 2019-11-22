@@ -8,20 +8,26 @@
 get_header();
 ?>
 
-<main id="page" class="container content-area">
+<div class="container content-area">
 
-	<?php
-	while ( have_posts() ) :
-		the_post();
+	<main>
 
-		get_template_part( 'partials/content', 'page' );
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-		get_sidebar();
+			get_template_part( 'partials/content', 'page' );
 
-	endwhile;
-	?>
+		endwhile;
+		?>
 
-</main>
+	</main>
+
+	<?php get_sidebar(); ?>
+
+</div>
 
 <?php
+
 get_footer();
+

@@ -44,7 +44,7 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 						<div class="post-date">
 
-							<i class="far fa-calendar-alt"></i><span><?php echo esc_html( get_the_modified_date( '', $feat_post->ID ) ); ?></span>
+							<i class="fas fa-calendar-alt"></i><span><?php echo esc_html( get_the_modified_date( '', $feat_post->ID ) ); ?></span>
 
 						</div>
 
@@ -72,7 +72,7 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 						<div class="post-tags">
 
-							<i class="fas fa-list-ul"></i>
+							<i class="fas fa-tags"></i>
 
 							<span>
 

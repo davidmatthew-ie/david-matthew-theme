@@ -68,6 +68,7 @@
 
         i {
             margin-right: 0.25em;
+            color: #c6c6c6;
         }
 
         h3, p {
@@ -95,6 +96,11 @@
         img {
             width: 90px;
             height: 90px;
+        }
+
+        .fa-tags {
+            font-size: 0.9em;
+            transform: scaleX(-1);
         }
     }
 

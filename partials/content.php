@@ -1,6 +1,6 @@
 <?php
 /**
- * The partial for displaying posts.
+ * The partial for displaying post content.
  *
  * @package David_Matthew_IE
  */
@@ -9,19 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-
-		<?php
-		if ( is_singular() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		}	
-		else {
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		}
-
-		?>
-
-	</header><!-- .entry-header -->
+	<?php get_template_part( 'partials/title-header' ); ?>
 
 	<div class="entry-content">
 
