@@ -58,7 +58,7 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 						<div class="read-more-desktop">
 
-							<?php echo wp_kses_post( substr( $feat_post->post_content, 0, 170 ) ) . '...'; ?>
+							<?php echo wp_kses_post( substr( $feat_post->post_content, 0, 150 ) ) . '...'; ?>
 
 							<span class="text-red">[read more]</span>
 

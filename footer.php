@@ -7,7 +7,7 @@
 
 ?>
 
-<footer>
+<footer id="footer">
 
 	<p>&copy; David Matthew <?php echo esc_html( date( 'Y' ) ); ?></p>
 

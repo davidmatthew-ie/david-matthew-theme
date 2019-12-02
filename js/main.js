@@ -47,6 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
+     * Logo animate on click.
+     */
+    let logo = document.querySelector('.logo img');
+    logo.addEventListener('click', function() {
+        logo.style.transform = 'rotate(-360deg)';
+    });
+
+    /**
      * Slider functionality.
      */
     const sliderExists = document.getElementById('slider');

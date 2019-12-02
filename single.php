@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-<div class="container content-area flex-row entry-header-offset">
+<div class="container content-area flex-row">
 
 	<main id="primary">
 

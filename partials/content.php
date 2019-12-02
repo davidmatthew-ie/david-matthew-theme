@@ -9,9 +9,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php get_template_part( 'partials/title-header' ); ?>
+	<?php get_template_part( 'partials/post-header' ); ?>
 
-	<div class="entry-content">
+	<div class="entry-content animated fadeInUp">
 
 		<?php
 		the_content(

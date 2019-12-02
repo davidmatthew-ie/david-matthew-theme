@@ -1,5 +1,5 @@
 /**
- * General page body styling.
+ * General site-wide styling.
  */
 
 *, ::after, ::before {
@@ -12,6 +12,42 @@ body, html {
 
 body {
     margin: 0;   
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #444;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0.75em 0 0.5em 0;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+a {
+    color: #A92D2D;
+}
+
+.text-gradient-black-red {
+    background-image: linear-gradient(to right, #000000, #fb4141);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-red {
+    color: #fb4141;
 }
 
 .content-area {
@@ -53,29 +89,21 @@ body {
     flex-flow: row wrap;
 }
 
-#primary,
-#secondary {
-    width: 100%;
+input,
+textarea {
+    display: block;
+    font-size: 1em;
+    line-height: 1.6em;
+    border: 1px solid #ddd;
+    max-width: 100%;
 }
 
-.entry-header {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    height: 200px;
-    width: 100%;
-    background-color: #666;
-
-    h1 {
-        color: white;
-    }
+input[type=radio],
+input[type=checkbox] {
+    display: inline-block;
 }
 
-.entry-header-offset {
-    margin-top: 200px;
-}
-
-footer {
+#footer {
     display: flex;
     height: 70px;
     background-color: #fff;

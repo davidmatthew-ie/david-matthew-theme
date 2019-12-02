@@ -7,6 +7,20 @@
 	animation-fill-mode: both;
 }
 
+.fadeIn {
+	animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+  
+	to {
+		opacity: 1;
+	}
+}
+
 .fadeInDown {
 	animation-name: fadeInDown;
 }
@@ -14,7 +28,7 @@
 @keyframes fadeInDown {
 	from {
 		opacity: 0;
-		transform: translate3d(0, -50%, 0);
+		transform: translate3d(0, -100px, 0);
 	}
   
 	to {
@@ -30,7 +44,7 @@
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
-		transform: translate3d(0, 50%, 0);
+		transform: translate3d(0, 100px, 0);
 	}
   
 	to {
@@ -46,7 +60,7 @@
 @keyframes fadeInLeft {
 	from {
 		opacity: 0;
-		transform: translate3d(-50%, 0, 0);
+		transform: translate3d(-100px, 0, 0);
 	}
   
 	to {
@@ -62,7 +76,7 @@
 @keyframes fadeInRight {
 	from {
 		opacity: 0;
-		transform: translate3d(50%, 0, 0);
+		transform: translate3d(100px, 0, 0);
 	}
   
 	to {
@@ -90,8 +104,16 @@
     .social-icons {
         @for $i from 1 through 6 {
             a:nth-child(#{$i}) {
-                animation-delay: $i * 0.1s;
+                animation-delay: $i * 0.2s;
             }
         }
     }
+}
+
+.header-content {
+	@for $i from 2 through 4 {
+		span:nth-child(#{$i}) {
+			animation-delay: $i * 0.1s;
+		}
+	}
 }

@@ -1,0 +1,40 @@
+/**
+ * Styling for posts and pages.
+ */
+
+#primary,
+#secondary {
+    width: 100%;
+}
+
+#secondary {
+    border-top: 1px solid #ddd;
+    animation-name: fadeInRight;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+}
+
+.entry-header {
+    margin-bottom: 30px;
+        
+    .header-content {
+        position: relative; 
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        span {
+            display: inline-block;
+            font-size: 0.9em;
+            line-height: 1.6em;
+            margin-left: 1em;
+        }
+
+        i {
+            color: #444;
+            min-width: 25px;
+        }
+    }  
+}

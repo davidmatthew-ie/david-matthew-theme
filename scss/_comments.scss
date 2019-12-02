@@ -1,0 +1,36 @@
+/**
+ * Styling of visitor comments.
+ */
+
+#comments {
+    border-top: 1px solid #ddd;
+
+    .comment-list {
+        list-style: none;
+        padding-inline-start: 0;
+
+        .comment-body {
+            padding: 1em;
+            margin: 1em 0;
+            border: 1px solid #ddd;
+        }
+
+        .children {
+            list-style: none;
+            padding-inline-start: 2em;
+        }
+    }
+
+    .avatar {
+        display: none;
+    }
+
+    .comment-form {
+        input[type=submit] {
+            color: #fff;
+            background-image: linear-gradient(to right, #7d1212, #fb4141);
+            border: none;
+            padding: 0.6em 0.9em;
+        }
+    }
+}
