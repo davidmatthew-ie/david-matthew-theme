@@ -96,7 +96,11 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 					<div class="post-div">
 
-						<img src="<?php echo esc_url( get_the_post_thumbnail_url( $feat_post->ID, 'thumbnail' ) ); ?>" alt="<?php echo esc_html( $feat_post->post_title ); ?>"/>
+						<div class="slider-img-wrap">
+
+							<img src="<?php echo esc_url( get_the_post_thumbnail_url( $feat_post->ID, 'thumbnail' ) ); ?>" alt="<?php echo esc_html( $feat_post->post_title ); ?>"/>
+
+						</div>
 
 					</div>
 

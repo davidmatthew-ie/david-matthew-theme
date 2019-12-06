@@ -51,6 +51,15 @@
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.9);
+
+        .post-div {
+            .slider-img-wrap {    
+                img {
+                    width: 105%;
+                    height: 105%;
+                }
+            }
+        }
     }
 
     .post-div {
@@ -94,9 +103,17 @@
             font-size: 0.9em;
         }
 
-        img {
+        .slider-img-wrap {
             width: 90px;
             height: 90px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.2s;
+            }
         }
 
         .fa-tags {

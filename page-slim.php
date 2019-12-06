@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying generic pages.
+ * Template Name: Slim Page
+ *
+ * The template for displaying pages without sidebar content.
  *
  * @package David_Matthew_IE
  */
@@ -10,7 +12,7 @@ get_header();
 
 <div class="container content-area flex-row">
 
-	<main id="primary">
+	<main id="primary" class="page-slim">
 
 		<?php
 		while ( have_posts() ) :
@@ -22,8 +24,6 @@ get_header();
 		?>
 
 	</main>
-
-	<?php get_sidebar(); ?>
 
 </div>
 

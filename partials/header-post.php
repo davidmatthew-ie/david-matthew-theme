@@ -1,6 +1,6 @@
 <?php
 /**
- * The partial for displaying title headers.
+ * The partial for displaying post headers.
  *
  * @package David_Matthew_IE
  */
@@ -13,7 +13,7 @@
 
 		<?php the_title( '<h1 class="entry-title animated fadeInDown">', '</h1>' ); ?>
 
-		<span class="animated fadeInRight"><i class="fas fa-user"></i>Author: <?php the_author_meta( 'display_name' ); ?></span>
+		<span class="animated fadeInLeft"><i class="fas fa-user"></i>Author: <?php the_author_meta( 'display_name' ); ?></span>
 
 		<?php
 
@@ -26,9 +26,9 @@
 
 		?>
 
-		<span class="animated fadeInRight"><i class="fas fa-calendar-alt"></i><?php echo esc_html( $date_string ); ?></span>
+		<span class="animated fadeInLeft"><i class="fas fa-calendar-alt"></i><?php echo esc_html( $date_string ); ?></span>
 
-		<span class="animated fadeInRight"><i class="fas fa-tags"></i><?php the_tags(); ?></span>
+		<span class="animated fadeInLeft"><i class="fas fa-tags"></i><?php the_tags(); ?></span>
 
 	</div>
 

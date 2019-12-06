@@ -8,9 +8,9 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area container">
+<div class="container content-area flex-row">
 
-	<main id="main" class="site-main">
+	<main id="primary">
 
 	<?php
 	if ( have_posts() ) :
@@ -18,7 +18,7 @@ get_header();
 
 		<header class="page-header">
 
-			<h1 class="page-title">
+			<h1 class="entry-title animated fadeInLeft">
 				<?php
 				/* translators: %s: search query. */
 				printf( esc_html__( 'Search Results for: %s', 'david-matthew' ), '<span>' . get_search_query() . '</span>' );
@@ -30,7 +30,7 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-			get_template_part( 'partials/content', 'search' );
+			get_template_part( 'partials/content', 'preview' );
 
 		endwhile;
 

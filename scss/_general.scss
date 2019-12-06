@@ -40,6 +40,10 @@ a {
     color: #A92D2D;
 }
 
+.container-link {
+    text-decoration: none;
+}
+
 .text-gradient-black-red {
     background-image: linear-gradient(to right, #000000, #fb4141);
     -webkit-background-clip: text;
@@ -52,18 +56,18 @@ a {
 
 .content-area {
     padding-top: 85px;
-    padding-bottom: 15px;
+    padding-bottom: 50px;
     min-height: 100%;
     z-index: 1;
 }
 
 .container {
     width: 100%;
+    max-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
-    overflow: hidden;
 }
 
 .bg-img-full {
