@@ -210,6 +210,11 @@
 }
 
 @media screen and (min-width: 768px) {
+    .container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     #menu-mobile {
         padding: 40px;
 
@@ -228,7 +233,7 @@
 
     #homepage-content {
         .row {
-            padding: 0 12%;
+            padding: 0 8%;
             margin-top: 15vh;
         }
 
@@ -250,11 +255,6 @@
 
     .page,
     .single {
-        #primary {
-            padding-left: 1.5em;
-            padding-right: 1.5em;
-        }
-
         #primary,
         #secondary {
             h1 {
@@ -289,12 +289,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .container {
-        max-width: 1100px;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
     #primary {
         width: 65%;
         margin-right: 5%;
