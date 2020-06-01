@@ -8,8 +8,7 @@
 $menu_args = array(
 	'theme_location' => 'primary',
 	'depth'          => 2,
-	'container'      => false,
-	'walker'         => new \DM\Theme\Walker(),
+	'container'      => false
 );
 
 ?>

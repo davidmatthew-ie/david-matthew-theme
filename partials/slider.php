@@ -18,13 +18,13 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 	<a href="<?php echo esc_url( get_theme_mod( 'blog_url' ) ); ?>">
 
-		<h2 class="animated fadeInRight"><i class="fas fa-list-ul"></i>View <span class="text-red">All</span></h2>
+		<h2 class="animated fadeInLeft"><i class="fas fa-list-ul"></i>View <span class="text-red">All</span></h2>
 
 	</a>
 
 </div>
 
-<div class="slider-body animated fadeInUp">
+<div class="slider-body animated fadeInDown">
 
 	<div id="slider">
 
@@ -50,7 +50,7 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 						<div class="read-more-tablet">
 
-							<?php echo wp_kses_post( substr( $feat_post->post_content, 0, 110 ) ) . '...'; ?>
+							<p><?php echo strip_tags( substr( $feat_post->post_content, 0, 110 ) ) . '...'; ?></p>
 
 							<span class="text-red">[read more]</span>
 
@@ -58,7 +58,7 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 						<div class="read-more-desktop">
 
-							<?php echo wp_kses_post( substr( $feat_post->post_content, 0, 150 ) ) . '...'; ?>
+							<p><?php echo strip_tags( substr( $feat_post->post_content, 0, 150 ) ) . '...'; ?></p>
 
 							<span class="text-red">[read more]</span>
 

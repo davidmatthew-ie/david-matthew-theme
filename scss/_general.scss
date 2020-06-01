@@ -27,6 +27,14 @@ h1 {
     font-size: 1.8em;
 }
 
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     margin: 0.75em 0 0.5em 0;
 }
@@ -105,6 +113,19 @@ textarea {
 input[type=radio],
 input[type=checkbox] {
     display: inline-block;
+}
+
+input[type=search] {
+    margin: 0.5em 0;
+}
+
+input[type=search],
+input[type=submit] {
+    padding: 0.5em 1em;
+}
+
+.screen-reader-text {
+    display: none;
 }
 
 #footer {

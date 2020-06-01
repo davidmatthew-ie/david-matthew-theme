@@ -16,15 +16,6 @@ if ( $modified_time >= $original_time + 86400 ) {
 	$date_string .= ' (Updated ' . get_the_modified_date( 'j M Y' ) . ')';
 }
 
-/**
- * Create an array of the tag names.
- */
-$feat_post_tags = get_the_tags();
-$fp_tag_names   = [];
-foreach ( $feat_post_tags as $fpt ) {
-	array_push( $fp_tag_names, $fpt->name );
-}
-
 ?>
 
 <a href="<?php the_permalink(); ?>" class="container-link">
@@ -36,12 +27,10 @@ foreach ( $feat_post_tags as $fpt ) {
 			<?php the_title( '<h2 class="preview-title">', '</h2>' ); ?>
 
 			<span class="preview-info"><i class="fas fa-calendar-alt"></i><?php echo esc_html( $date_string ); ?></span>
-
-			<span class="preview-info"><i class="fas fa-tags"></i><?php echo esc_html( implode( ', ', $fp_tag_names ) ); ?></span>
-
+			
 			<div class="read-more">
 
-				<?php echo wp_kses_post( substr( get_the_content(), 0, 180 ) ) . '...'; ?>
+				<p><?php echo strip_tags( substr( get_the_content(), 0, 180 ) ) . '...'; ?></p>
 
 				<span class="text-red">[read more]</span>
 

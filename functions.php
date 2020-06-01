@@ -51,7 +51,7 @@ add_action( 'after_setup_theme', 'DM\Theme\setup' );
 function widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'david-matthew' ),
+			'name'          => esc_html__( 'Sidebar 1', 'david-matthew' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'david-matthew' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -92,6 +92,3 @@ add_action( 'wp_enqueue_scripts', 'DM\Theme\enqueue_js' );
 
 // Require the customizer file.
 require 'customizer.php';
-
-// Require the custom nav walker class.
-require 'classes/class-walker.php';
