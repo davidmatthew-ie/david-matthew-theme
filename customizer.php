@@ -202,29 +202,5 @@ function customize( $wp_customize ) {
 			)
 		);
 	}
-
-	// Google analytics section.
-	$wp_customize->add_section(
-		'google_analytics',
-		array(
-			'capability' => 'edit_theme_options',
-			'title'      => __( 'Google Analytics', 'david-matthew' ),
-			'panel'      => 'dm_theme_panel',
-		)
-	);
-
-	$wp_customize->add_setting( 'ga' );
-	$wp_customize->add_control(
-		new \WP_Customize_Control(
-			$wp_customize,
-			'ga_ctl',
-			array(
-				'label'    => __( 'Analytics Code', 'david-matthew' ),
-				'type'     => 'textarea',
-				'section'  => 'google_analytics',
-				'settings' => 'ga',
-			)
-		)
-	);
 }
 add_action( 'customize_register', 'DM\Theme\customize' );
