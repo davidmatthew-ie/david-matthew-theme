@@ -5,12 +5,14 @@
  * @package David_Matthew_IE
  */
 
+/**
+ * Fetch each post ID and push them into the array.
+ */
 $feat_posts[] = get_post( get_theme_mod( 'feat_post_1' ) );
 $feat_posts[] = get_post( get_theme_mod( 'feat_post_2' ) );
 $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 ?>
-
 
 <div class="slider-header">
 
@@ -50,15 +52,15 @@ $feat_posts[] = get_post( get_theme_mod( 'feat_post_3' ) );
 
 						<div class="read-more-tablet">
 
-							<p><?php echo strip_tags( substr( $feat_post->post_content, 0, 110 ) ) . '...'; ?></p>
+							<p><?php echo $feat_post->post_excerpt ? strip_tags( substr( $feat_post->post_excerpt, 0, 100 ) ) . '...' : strip_tags( substr( $feat_post->post_content, 0, 100 ) ) . '...' ; ?></p>
 
-							<span class="text-red">[read more]</span>
+							<p><span class="text-red">[read more]</span></p>
 
 						</div>
 
 						<div class="read-more-desktop">
 
-							<p><?php echo strip_tags( substr( $feat_post->post_content, 0, 150 ) ) . '...'; ?></p>
+							<p><?php echo $feat_post->post_excerpt ? strip_tags( substr( $feat_post->post_excerpt, 0, 140 ) ) . '...' : strip_tags( substr( $feat_post->post_content, 0, 140 ) ) . '...' ; ?></p>
 
 							<span class="text-red">[read more]</span>
 

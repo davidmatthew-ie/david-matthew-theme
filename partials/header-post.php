@@ -11,13 +11,11 @@
 
 	<div class="header-content">
 
-		<?php the_title( '<h1 class="entry-title animated fadeInDown">', '</h1>' ); ?>
-
-		<span class="animated fadeInLeft"><i class="fas fa-user"></i>Author: <?php the_author_meta( 'display_name' ); ?></span>
-
 		<?php
+		
+		the_title( '<h1 class="entry-title animated fadeInDown">', '</h1>' );
 
-		$date_string   = 'Published: ' . get_the_date( 'j M Y' );
+		$date_string   = get_the_date( 'j M Y' );
 		$original_time = get_the_time( 'U' );
 		$modified_time = get_the_modified_time( 'U' );
 		if ( $modified_time >= $original_time + 86400 ) {

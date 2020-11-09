@@ -16,6 +16,11 @@ if ( $modified_time >= $original_time + 86400 ) {
 	$date_string .= ' (Updated ' . get_the_modified_date( 'j M Y' ) . ')';
 }
 
+/**
+ * Retrieve a shortened excerpt.
+ */
+$article_excerpt = substr( get_the_excerpt(), 0, 100 );
+
 ?>
 
 <a href="<?php the_permalink(); ?>" class="container-link">
@@ -30,9 +35,9 @@ if ( $modified_time >= $original_time + 86400 ) {
 			
 			<div class="read-more">
 
-				<p><?php echo strip_tags( substr( get_the_content(), 0, 180 ) ) . '...'; ?></p>
+				<p><?php echo strip_tags( $article_excerpt ) . '...'; ?></p>
 
-				<span class="text-red">[read more]</span>
+				<p><span class="text-red">[read more]</span></p>
 
 			</div>
 

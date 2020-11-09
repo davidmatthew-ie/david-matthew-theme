@@ -2,6 +2,27 @@
  * Styling for posts and pages.
  */
 
+article {
+    margin-bottom: 50px;
+
+    .comment-body {
+        background-color: #fff;
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+blockquote {
+    margin-top: 20px;
+    background-color: #f2f2f4;
+    padding: 10px 20px 20px 30px;
+    border-bottom-right-radius: 20px;
+    border-left: 5px solid #dedee5;
+    font-style: italic;
+}
+
 #primary,
 #secondary {
     width: 100%;
@@ -51,15 +72,14 @@
     border-left: 5px solid #fb4141;
     padding: 13px;
     margin-bottom: 50px;
-    transition: box-shadow 0.4s;
+    transition: box-shadow 0.3s;
 
     &:hover {
         box-shadow: -2px 0 15px #dadada;
 
         .preview-img {
             img {
-                width: 105%;
-                height: 105%;
+                transform: scale(1.08);
             }
         }
     }
@@ -96,13 +116,14 @@
 
     .preview-img {
         overflow: hidden;
-        height: 150px;
+        height: 225px;
+        width: 100%;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.2s;
+            transition: all 0.3s;
         }
     }    
 }

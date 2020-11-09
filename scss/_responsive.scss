@@ -168,7 +168,7 @@
 		}
 
 		.post-preview {
-			height: 160px;
+			height: 200px;
 		
 			.post-div {    
 				h3 {
@@ -207,6 +207,12 @@
 		.preview-img {
 			height: 220px;
 		}    
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#wpadminbar {
+		position: fixed;
 	}
 }
 
@@ -272,7 +278,7 @@
 	}
 
 	p, li {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 	}
 }
 
